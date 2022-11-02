@@ -21,3 +21,27 @@ class Solution:
             q.append((node[0].left, node[1] + 1))
             q.append((node[0].right, node[1] + 1))
         return arr
+
+# another (better) solution
+# from collections import deque
+
+# class Solution:
+#     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+#         if root == None:
+#             return []
+        
+#         arr = []
+#         q = deque()
+#         q.append(root)
+#         while q:
+#             level = []
+#             for i in range(len(q)):
+#                 node = q.popleft()
+#                 level.append(node.val)
+#                 if node.left:
+#                     q.append(node.left)
+#                 if node.right:
+#                     q.append(node.right)
+#             arr.append(level)
+#         return arr
+                    
